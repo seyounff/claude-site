@@ -23,8 +23,188 @@
   <meta name="twitter:description" content="A tactical extraction dungeon RPG currently in development by Mercenary Company Games.">
   <meta name="twitter:image" content="https://mercenarycompanygame.com/assets/screenshots/social-preview.jpg">
   <meta name="twitter:image:alt" content="Actual Mercenary Company dungeon gameplay with party health, combat and a minimap.">
-  <link rel="preload" as="image" href="assets/screenshots/hero-gameplay.webp" imagesrcset="assets/screenshots/hero-gameplay-640.webp 640w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" imagesizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="assets/screenshots/hero-gameplay.webp" imagesrcset="assets/screenshots/hero-gameplay-640.webp 640w, assets/screenshots/hero-gameplay-768.webp 768w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" imagesizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" fetchpriority="high">
+  <!-- Inlined from styles.css to avoid a blocking network request. -->
+  <style id="site-styles">
+:root {
+  color-scheme: dark;
+  --ink: #111315;
+  --deep: #0c0e10;
+  --paper: #ece6db;
+  --soft: #bcb9b1;
+  --gold: #c1aa7e;
+  --rule: #383a39;
+  --content: 1360px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body { margin: 0; background: var(--ink); color: var(--paper); font-size: 17px; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+a, button { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+main:focus { outline: none; }
+p, h1, h2, h3, figure, dl { margin: 0; }
+p { color: var(--soft); }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+h2 { font-size: clamp(30px, 3vw, 43px); line-height: 1.18; letter-spacing: -.025em; }
+h3 { line-height: 1.25; }
+img { display: block; max-width: 100%; height: auto; }
+.container { width: min(var(--content), calc(100% - 80px)); margin-inline: auto; }
+.section-rule { border-top: 1px solid var(--rule); }
+.eyebrow { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: .13em; line-height: 1.5; text-transform: uppercase; margin-bottom: 18px; }
+.skip-link { position: absolute; z-index: 10; left: 20px; top: 12px; padding: 10px 16px; background: var(--paper); color: var(--deep); transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { border-bottom: 1px solid var(--rule); }
+.header-inner { display: flex; min-height: 88px; align-items: center; justify-content: space-between; gap: 32px; }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; font-family: Georgia, "Times New Roman", serif; font-size: 18px; white-space: nowrap; }
+.monogram { display: grid; width: 34px; height: 38px; place-items: center; border: 1px solid var(--gold); color: var(--gold); font-size: 22px; }
+nav { display: flex; gap: 28px; }
+nav a { display: grid; min-height: 44px; place-items: center; font-size: 14px; color: var(--soft); }
+nav a:hover, .text-link:hover { color: var(--paper); }
+.hero { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.65fr); gap: 18px 50px; align-items: start; padding-block: 82px 90px; }
+.hero-copy { grid-column: 1; grid-row: 1; }
+.hero-footer { grid-column: 1; grid-row: 2; align-self: end; }
+.hero-screen { grid-column: 2; grid-row: 1 / span 2; }
+.hero-footer .hero-description { margin-top: 0; }
+.hero h1 { font-size: clamp(43px, 4.2vw, 65px); line-height: 1.03; letter-spacing: -.035em; text-transform: uppercase; }
+.hero h1 span { display: block; }
+.hero h1 span:last-child { color: var(--gold); }
+.hero-lead { font-size: 19px; line-height: 1.6; max-width: 39ch; margin-top: 28px; color: var(--paper); }
+.hero-description { max-width: 43ch; margin-top: 18px; font-size: 16px; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 28px; }
+.button { display: inline-flex; gap: 24px; align-items: center; min-height: 48px; padding: 10px 20px; border: 1px solid var(--gold); font-size: 14px; font-weight: 600; }
+.button:hover { background: #25251f; }
+.text-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 14px; color: var(--soft); }
+.development-status { margin-top: 28px; padding-left: 16px; border-left: 2px solid var(--gold); color: var(--soft); font-size: 12px; font-weight: 600; letter-spacing: .11em; text-transform: uppercase; }
+.screenshot-link { display: block; border: 1px solid #555950; background: var(--deep); }
+.screenshot-link:hover { border-color: var(--gold); }
+.screenshot-link img { width: 100%; }
+figcaption { margin-top: 12px; font-size: 12px; letter-spacing: .025em; color: var(--soft); }
+.hero-screen figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 20px; }
+.zoom-link { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+.overview { background: var(--deep); padding-block: 70px 68px; }
+.section-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.section-intro > p { max-width: 58ch; }
+.game-pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; margin-top: 44px; border-top: 1px solid var(--rule); padding-top: 28px; }
+.game-pillars h3 { font-size: 23px; margin-bottom: 12px; }
+.game-pillars p { font-size: 16px; max-width: 32ch; }
+.showcase { padding-block: 80px 76px; }
+.showcase-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; padding-bottom: 46px; }
+.showcase-heading > p { font-size: 14px; line-height: 1.6; }
+.feature-row { display: grid; grid-template-columns: minmax(0, 2.25fr) minmax(0, 1fr); gap: 52px; align-items: center; }
+.feature-row + .feature-row { margin-top: 62px; padding-top: 62px; border-top: 1px solid var(--rule); }
+.feature-reverse { grid-template-columns: minmax(0, 1fr) minmax(0, 2.25fr); }
+.feature-reverse figure { grid-column: 2; grid-row: 1; }
+.feature-reverse .feature-copy { grid-column: 1; grid-row: 1; }
+.feature-copy h3 { font-size: clamp(27px, 2.1vw, 34px); letter-spacing: -.02em; margin-bottom: 20px; }
+.feature-copy p:not(.eyebrow) + p { margin-top: 14px; }
+.feature-copy p:not(.eyebrow) { font-size: 16px; max-width: 36ch; }
+.build-note { font-size: 13px; text-align: center; margin-top: 38px; }
+.development { background: var(--deep); padding-block: 70px; }
+.development-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 120px; align-items: start; }
+.development-copy > p:not(.eyebrow) { max-width: 55ch; margin-top: 24px; }
+.development-copy > p:not(.eyebrow) + p { margin-top: 12px; }
+.project-details { border-top: 1px solid var(--rule); }
+.project-details > div { display: grid; grid-template-columns: 95px 1fr; gap: 20px; padding-block: 17px; border-bottom: 1px solid var(--rule); }
+dt { color: var(--soft); font-size: 13px; }
+dd { margin: 0; font-size: 16px; }
+.contact { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 34px; padding-block: 72px; }
+.contact p:last-child { margin-top: 16px; font-size: 16px; }
+.contact-email { display: inline-flex; align-items: center; gap: 24px; padding-block: 12px; border-bottom: 1px solid var(--gold); color: var(--paper); font-size: clamp(17px, 1.45vw, 26px); overflow-wrap: anywhere; }
+.contact-email:hover { color: var(--gold); }
+.contact-email > span { color: var(--gold); flex: 0 0 auto; }
+.site-footer { padding-block: 28px; }
+.footer-inner { display: flex; gap: 32px; justify-content: space-between; align-items: center; }
+.footer-inner p { font-size: 12px; line-height: 1.6; }
+dialog { width: min(1700px, calc(100% - 48px)); max-width: none; max-height: calc(100svh - 48px); margin: auto; padding: 18px 22px; background: var(--deep); color: var(--paper); border: 1px solid var(--rule); }
+dialog::backdrop { background: rgb(0 0 0 / .88); }
+.dialog-header, .dialog-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.dialog-header { margin-bottom: 18px; }
+.dialog-header h2 { font-family: "Segoe UI", Arial, sans-serif; font-size: 20px; letter-spacing: normal; }
+#dialog-close { padding: 8px 16px; min-height: 44px; color: var(--paper); background: var(--ink); border: 1px solid var(--gold); cursor: pointer; }
+#dialog-close span { margin-left: 10px; }
+#dialog-image { width: 100%; max-height: calc(100svh - 200px); object-fit: contain; }
+.dialog-footer { margin-top: 16px; }
+.dialog-footer p, .dialog-footer a { font-size: 13px; }
+.dialog-footer a { color: var(--gold); min-height: 44px; display: inline-flex; align-items: center; flex-shrink: 0; }
+@media (max-width: 1200px) {
+  .hero { gap: 18px 32px; padding-block: 62px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); }
+  .hero h1 { font-size: clamp(42px, 4.4vw, 57px); }
+  .hero-lead { font-size: 18px; }
+  .feature-row, .feature-reverse { gap: 32px; }
+  .development-inner { gap: 70px; }
+  .game-pillars { gap: 26px; }
+}
+@media (max-width: 900px) {
+  .header-inner { gap: 20px; }
+  .wordmark { font-size: 16px; }
+  nav { gap: 18px; }
+  nav a { font-size: 13px; }
+  .section-intro { gap: 48px; }
+  .game-pillars { grid-template-columns: repeat(2, 1fr); gap: 28px 44px; }
+  .feature-copy h3 { font-size: 27px; }
+  .development-inner { gap: 40px; }
+}
+@media (max-width: 800px) {
+  .container { width: calc(100% - 40px); }
+  .header-inner { flex-wrap: wrap; padding-block: 18px 10px; gap: 10px; }
+  .wordmark { font-size: 17px; }
+  nav { width: 100%; justify-content: space-between; gap: 8px; }
+  nav a { padding-inline: 8px; font-size: 14px; }
+  .hero { grid-template-columns: 1fr; gap: 0; padding-block: 44px 46px; }
+  .hero-copy, .hero-footer, .hero-screen { grid-column: auto; grid-row: auto; }
+  .hero-screen { margin-top: 26px; }
+  .hero-footer { margin-top: 22px; }
+  .hero h1 { font-size: clamp(42px, 8.2vw, 63px); }
+  .hero h1 span { display: inline; }
+  .hero h1 span + span::before { content: " "; }
+  .hero-lead { max-width: 52ch; margin-top: 22px; }
+  .hero-description { max-width: 56ch; }
+  .hero-actions { margin-top: 22px; }
+  .development-status { margin-top: 20px; }
+  .overview, .development { padding-block: 48px; }
+  .section-intro, .development-inner { grid-template-columns: 1fr; gap: 28px; }
+  .game-pillars { margin-top: 32px; }
+  .showcase { padding-block: 48px; }
+  .showcase-heading { flex-direction: column; align-items: start; gap: 18px; padding-bottom: 30px; }
+  .feature-row, .feature-reverse { grid-template-columns: 1fr; gap: 22px; }
+  .feature-reverse figure, .feature-reverse .feature-copy { grid-column: auto; grid-row: auto; }
+  .feature-row + .feature-row { margin-top: 36px; padding-top: 36px; }
+  .feature-copy .eyebrow { margin-bottom: 10px; }
+  .feature-copy h3 { margin-bottom: 14px; }
+  .feature-copy p:not(.eyebrow) { max-width: 60ch; }
+  .build-note { text-align: left; margin-top: 30px; }
+  .contact { padding-block: 48px; gap: 20px; }
+  .footer-inner { align-items: start; flex-direction: column; gap: 14px; }
+  dialog { width: calc(100% - 24px); max-height: calc(100svh - 24px); padding: 14px; }
+  .dialog-header { gap: 14px; }
+  .dialog-header h2 { font-size: 17px; }
+  .dialog-footer { align-items: start; flex-direction: column; gap: 8px; }
+}
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .wordmark { font-size: 16px; }
+  .monogram { width: 28px; height: 32px; font-size: 19px; }
+  .hero h1 span { display: block; }
+  .hero h1 span + span::before { content: none; }
+  .hero-lead { font-size: 18px; }
+  .hero-actions { gap: 8px 20px; }
+  .button { padding-inline: 16px; }
+  .hero-screen figcaption { font-size: 11px; }
+  .game-pillars { grid-template-columns: 1fr; gap: 24px; }
+  .game-pillars h3 { font-size: 23px; margin-bottom: 8px; }
+  .game-pillars p { max-width: 40ch; }
+  .project-details > div { grid-template-columns: 75px 1fr; gap: 14px; }
+  .contact-email { gap: 10px; font-size: 17px; }
+  .dialog-header h2 { max-width: 18ch; }
+  #dialog-close { font-size: 14px; padding-inline: 12px; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; } }
+  </style>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -49,7 +229,7 @@
       </div>
       <figure class="hero-screen">
         <a class="screenshot-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean." aria-label="Enlarge the dungeon expedition screenshot">
-          <img src="assets/screenshots/hero-gameplay.webp" srcset="assets/screenshots/hero-gameplay-640.webp 640w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" width="1920" height="1080" fetchpriority="high" alt="Mercenary Company dungeon expedition: a four-person party facing hostile mercenaries, with party health, skills and a minimap.">
+          <img src="assets/screenshots/hero-gameplay.webp" srcset="assets/screenshots/hero-gameplay-640.webp 640w, assets/screenshots/hero-gameplay-768.webp 768w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" width="1920" height="1080" fetchpriority="high" alt="Mercenary Company dungeon expedition: a four-person party facing hostile mercenaries, with party health, skills and a minimap.">
         </a>
         <figcaption><span>Actual gameplay · Development build</span><a class="zoom-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean.">View full image <span aria-hidden="true">↗</span></a></figcaption>
       </figure>
@@ -86,7 +266,7 @@
       <article class="feature-row">
         <figure>
           <a class="screenshot-link" href="assets/screenshots/combat.webp" data-lightbox data-title="Dungeon combat" data-caption="Live combat, party health, carried loot and the dungeon minimap. UI shown in English." aria-label="Enlarge the dungeon combat screenshot">
-            <img src="assets/screenshots/combat-1600.webp" srcset="assets/screenshots/combat-800.webp 800w, assets/screenshots/combat-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" alt="A warrior, archer, mage and priest fighting a slime in a stone dungeon, with party health and carried-loot inventory visible.">
+            <img src="assets/screenshots/combat-1600.webp" srcset="assets/screenshots/combat-768.webp 768w, assets/screenshots/combat-800.webp 800w, assets/screenshots/combat-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" fetchpriority="low" alt="A warrior, archer, mage and priest fighting a slime in a stone dungeon, with party health and carried-loot inventory visible.">
           </a>
           <figcaption>Dungeon combat · English UI</figcaption>
         </figure>
@@ -95,7 +275,7 @@
       <article class="feature-row feature-reverse">
         <figure>
           <a class="screenshot-link" href="assets/screenshots/expedition.webp" data-lightbox data-title="Expedition preparation" data-caption="Expedition policy, tactical priorities, supplies, equipment and the party formation. UI shown in Korean." aria-label="Enlarge the expedition preparation screenshot">
-            <img src="assets/screenshots/expedition-1600.webp" srcset="assets/screenshots/expedition-800.webp 800w, assets/screenshots/expedition-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" alt="Expedition preparation showing five policy choices, tactical priorities, potion supplies and a three-by-three formation for four mercenaries.">
+            <img src="assets/screenshots/expedition-1600.webp" srcset="assets/screenshots/expedition-768.webp 768w, assets/screenshots/expedition-800.webp 800w, assets/screenshots/expedition-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" fetchpriority="low" alt="Expedition preparation showing five policy choices, tactical priorities, potion supplies and a three-by-three formation for four mercenaries.">
           </a>
           <figcaption>Expedition policy &amp; formation · Korean UI</figcaption>
         </figure>
@@ -104,7 +284,7 @@
       <article class="feature-row">
         <figure>
           <a class="screenshot-link" href="assets/screenshots/mercenary-management.webp" data-lightbox data-title="Mercenary management" data-caption="The deployed and reserve roster, with a selected mercenary’s equipment, skills and attributes. UI shown in Korean." aria-label="Enlarge the mercenary management screenshot">
-            <img src="assets/screenshots/mercenary-management-1600.webp" srcset="assets/screenshots/mercenary-management-800.webp 800w, assets/screenshots/mercenary-management-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" alt="The company roster with four deployed mercenaries, two reserves, and a selected warrior’s equipment, skills and combat attributes.">
+            <img src="assets/screenshots/mercenary-management-1600.webp" srcset="assets/screenshots/mercenary-management-768.webp 768w, assets/screenshots/mercenary-management-800.webp 800w, assets/screenshots/mercenary-management-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" fetchpriority="low" alt="The company roster with four deployed mercenaries, two reserves, and a selected warrior’s equipment, skills and combat attributes.">
           </a>
           <figcaption>Mercenary roster &amp; equipment · Korean UI</figcaption>
         </figure>
