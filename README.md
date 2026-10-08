@@ -41,7 +41,7 @@ The four scenes were captured from the actual Godot project on 2026-10-08 during
 | `expedition.webp` | Expedition policies, priorities, formation, and party equipment |
 | `mercenary-management.webp` | The mercenary roster and a selected mercenary's attributes, equipment, and skills |
 
-Original 1920 × 1080 PNG captures are retained outside this public repository. Full-size and standard responsive copies use lossless WebP. The 768-pixel mobile versions use near-lossless WebP; their measured maximum RGB channel difference is 1 out of 255 compared with the resized source. Responsive versions are selected through `srcset`. The social preview is a 1200 × 675 JPEG derived from the same real gameplay capture. No generated game art or fabricated gameplay is used.
+Original 1920 × 1080 PNG captures are retained outside this public repository. Full-size and standard responsive copies use lossless WebP. The 656- and 768-pixel mobile versions use near-lossless WebP; their measured maximum RGB channel difference is 1 out of 255 compared with the resized source. Responsive versions are selected through `srcset`. The social preview is a 1200 × 675 JPEG derived from the same real gameplay capture. No generated game art or fabricated gameplay is used.
 
 The website describes party preparation and autonomous expeditions. It does not claim direct player control during combat. Release dates, player counts, funding, team size, and Claude API integration are not asserted.
 
