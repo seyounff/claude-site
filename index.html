@@ -1,148 +1,138 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#171614">
-    <meta name="description" content="Mercenary Company is a tactical extraction dungeon RPG in active development by Mercenary Company Games.">
-    <link rel="canonical" href="https://mercenarycompanygame.com/">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <title>Mercenary Company — Mercenary Company Games</title>
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Mercenary Company Games">
-    <meta property="og:title" content="Mercenary Company — Mercenary Company Games">
-    <meta property="og:description" content="A tactical extraction dungeon RPG combining party management, dungeon exploration, and high-risk extraction gameplay.">
-    <meta property="og:url" content="https://mercenarycompanygame.com/">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Mercenary Company — Mercenary Company Games">
-    <meta name="twitter:description" content="A tactical extraction dungeon RPG in active development.">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header" id="top">
-      <div class="site-header__inner">
-        <a class="brand" href="#top">
-          <span class="brand__mark" aria-hidden="true">M</span>
-          <span>Mercenary Company Games</span>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111315">
+  <title>Mercenary Company — Mercenary Company Games</title>
+  <meta name="description" content="Official website for Mercenary Company, a tactical extraction dungeon RPG currently in development.">
+  <link rel="canonical" href="https://mercenarycompanygame.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mercenary Company Games">
+  <meta property="og:title" content="Mercenary Company — Mercenary Company Games">
+  <meta property="og:description" content="A tactical extraction dungeon RPG currently in development. Prepare your party, enter the dungeon, and risk what you carry.">
+  <meta property="og:url" content="https://mercenarycompanygame.com/">
+  <meta property="og:image" content="https://mercenarycompanygame.com/assets/screenshots/social-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Actual Mercenary Company dungeon gameplay with a four-person party and mercenary combat.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mercenary Company — Mercenary Company Games">
+  <meta name="twitter:description" content="A tactical extraction dungeon RPG currently in development by Mercenary Company Games.">
+  <meta name="twitter:image" content="https://mercenarycompanygame.com/assets/screenshots/social-preview.jpg">
+  <meta name="twitter:image:alt" content="Actual Mercenary Company dungeon gameplay with party health, combat and a minimap.">
+  <link rel="preload" as="image" href="assets/screenshots/hero-gameplay.webp" imagesrcset="assets/screenshots/hero-gameplay-640.webp 640w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" imagesizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="#main"><span class="monogram" aria-hidden="true">M</span>Mercenary Company Games</a>
+      <nav aria-label="Main navigation">
+        <a href="#game">Game</a>
+        <a href="#features">Features</a>
+        <a href="#development">Development</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero container" aria-labelledby="game-title">
+      <div class="hero-copy">
+        <p class="eyebrow">PC · In active development</p>
+        <h1 id="game-title"><span>Mercenary</span><span>Company</span></h1>
+        <p class="hero-lead">A tactical extraction dungeon RPG where every expedition puts your mercenaries and equipment at risk.</p>
+      </div>
+      <figure class="hero-screen">
+        <a class="screenshot-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean." aria-label="Enlarge the dungeon expedition screenshot">
+          <img src="assets/screenshots/hero-gameplay.webp" srcset="assets/screenshots/hero-gameplay-640.webp 640w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" width="1920" height="1080" fetchpriority="high" alt="Mercenary Company dungeon expedition: a four-person party facing hostile mercenaries, with party health, skills and a minimap.">
         </a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#about">About the game</a>
-          <a href="#development">Development</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__inner">
-          <div class="hero__content">
-            <p class="eyebrow"><span class="status-mark" aria-hidden="true"></span> Independent PC game <span class="eyebrow__divider">/</span> Active development</p>
-            <h1 id="hero-title">MERCENARY<br><span>COMPANY</span></h1>
-            <p class="hero__description">A tactical extraction dungeon RPG combining party management, dungeon exploration, and high-risk extraction gameplay.</p>
-            <p class="hero__status">Currently in active development.</p>
-            <div class="hero__actions">
-              <a class="button button--primary" href="#about">Explore the project</a>
-              <a class="button button--text" href="mailto:founder@mercenarycompanygame.com">Contact the studio <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-          <aside class="project-record" aria-label="Project overview">
-            <div class="project-record__heading"><span>Project record</span><span>01 / MC</span></div>
-            <div class="project-seal" aria-hidden="true"><span>MC</span></div>
-            <dl class="project-facts">
-              <div><dt>Format</dt><dd>PC · Tactical RPG</dd></div>
-              <div><dt>Expedition</dt><dd>Dungeon exploration</dd></div>
-              <div><dt>Engine</dt><dd>Godot Engine</dd></div>
-            </dl>
-          </aside>
+        <figcaption><span>Actual gameplay · Development build</span><a class="zoom-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>
+      <div class="hero-footer">
+        <p class="hero-description">Build your company. Recruit and equip a party. Set their strategy, then watch the expedition unfold.</p>
+        <div class="hero-actions">
+          <a class="button" href="#features">See the game <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#contact">Contact the studio <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero__foot" aria-hidden="true">
-          <span>Mercenary Company Games</span>
-          <span>Independent game development</span>
+        <p class="development-status">In active development</p>
+      </div>
+    </section>
+
+    <section id="game" class="overview section-rule" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="section-intro">
+          <div><p class="eyebrow">The game</p><h2 id="overview-title">Prepare the party.<br>Risk the expedition.</h2></div>
+          <p>Mercenary Company combines tactical party preparation, autonomous dungeon expeditions and extraction-driven risk. What your mercenaries bring home shapes the next expedition.</p>
         </div>
-      </section>
-      <div class="page-content">
-        <section class="content-section" id="about" aria-labelledby="about-title">
-          <div class="section-heading">
-            <p class="section-index">01 <span>/</span> GAME OVERVIEW</p>
-            <h2 id="about-title">ABOUT THE GAME</h2>
-          </div>
-          <div class="about-layout">
-            <p class="section-intro">Mercenary Company is a PC game about leading a company of mercenaries into dangerous dungeons and bringing the expedition home.</p>
-            <ul class="feature-list">
-              <li><span class="feature-list__number">01</span><span>PC game</span></li>
-              <li><span class="feature-list__number">02</span><span>Tactical party-based dungeon exploration</span></li>
-              <li><span class="feature-list__number">03</span><span>Extraction-based progression</span></li>
-              <li><span class="feature-list__number">04</span><span>Mercenary recruitment and management</span></li>
-              <li><span class="feature-list__number">05</span><span>Built with Godot Engine</span></li>
-            </ul>
-          </div>
-        </section>
-        <section class="content-section development-section" id="development" aria-labelledby="development-title">
-          <div class="section-heading">
-            <p class="section-index">02 <span>/</span> STUDIO NOTES</p>
-            <h2 id="development-title">DEVELOPMENT</h2>
-          </div>
-          <div class="development-layout">
-            <div class="development-copy">
-              <p>Mercenary Company is currently in active development by Mercenary Company Games.</p>
-              <p>The first dungeon is built in Godot as a 5 × 5 layout of distinct rooms, from supply halls to sealed chambers.</p>
-            </div>
-            <div class="development-fact" aria-label="Current dungeon layout: five by five rooms">
-              <span class="development-fact__label">First dungeon</span>
-              <span class="development-fact__value">5 <span>×</span> 5</span>
-              <span class="development-fact__caption">themed room layout</span>
-            </div>
-          </div>
-        </section>
-        <section class="content-section screenshots-section" id="screenshots" aria-labelledby="screenshots-title">
-          <div class="section-heading section-heading--with-note">
-            <div>
-              <p class="section-index">03 <span>/</span> PROJECT CAPTURES</p>
-              <h2 id="screenshots-title">GAME SCREENSHOTS</h2>
-            </div>
-            <p class="section-note">Gameplay captures will be added as development continues.</p>
-          </div>
-          <div class="screenshot-grid">
-            <figure class="screenshot">
-              <div class="screenshot__frame" role="img" aria-label="Screenshot placeholder 1 of 3: dungeon exploration">
-                <span class="screenshot__index">CAPTURE 01</span><span class="screenshot__number" aria-hidden="true">01</span><span class="screenshot__label">Dungeon exploration</span>
-              </div>
-              <figcaption><span>Environment</span><span>Screenshot placeholder</span></figcaption>
-            </figure>
-            <figure class="screenshot">
-              <div class="screenshot__frame" role="img" aria-label="Screenshot placeholder 2 of 3: mercenary party">
-                <span class="screenshot__index">CAPTURE 02</span><span class="screenshot__number" aria-hidden="true">02</span><span class="screenshot__label">Mercenary party</span>
-              </div>
-              <figcaption><span>Party management</span><span>Screenshot placeholder</span></figcaption>
-            </figure>
-            <figure class="screenshot">
-              <div class="screenshot__frame" role="img" aria-label="Screenshot placeholder 3 of 3: extraction">
-                <span class="screenshot__index">CAPTURE 03</span><span class="screenshot__number" aria-hidden="true">03</span><span class="screenshot__label">Extraction</span>
-              </div>
-              <figcaption><span>Expedition</span><span>Screenshot placeholder</span></figcaption>
-            </figure>
-          </div>
-        </section>
-        <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
-          <div class="section-heading">
-            <p class="section-index">04 <span>/</span> STUDIO CONTACT</p>
-            <h2 id="contact-title">CONTACT</h2>
-          </div>
-          <div class="contact-layout">
-            <p>For inquiries about the game or the studio, get in touch.</p>
-            <a class="contact-link" href="mailto:founder@mercenarycompanygame.com">founder@mercenarycompanygame.com <span aria-hidden="true">↗</span></a>
-          </div>
-        </section>
+        <div class="game-pillars">
+          <div><h3>A party of four</h3><p>Recruit mercenaries and prepare their equipment and formation.</p></div>
+          <div><h3>Hostile dungeons</h3><p>Watch your party explore and fight according to the policy you set.</p></div>
+          <div><h3>Extraction risk</h3><p>Equipment carried into the dungeon is at risk until the party extracts.</p></div>
+          <div><h3>Company management</h3><p>Manage your roster, equipment and storage between expeditions.</p></div>
+        </div>
       </div>
-    </main>
-    <footer class="site-footer">
-      <div class="site-footer__inner">
-        <a class="footer-brand" href="#top">Mercenary Company Games</a>
-        <p>© 2026 Mercenary Company Games.<br>All rights reserved.</p>
-        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </section>
+
+    <section id="features" class="showcase container" aria-labelledby="features-title">
+      <div class="showcase-heading">
+        <div><p class="eyebrow">Gameplay &amp; screenshots</p><h2 id="features-title">Inside Mercenary Company.</h2></div>
+        <p>Real screens from the current development build.<br>Open any image for a closer look.</p>
       </div>
-    </footer>
-  </body>
+      <article class="feature-row">
+        <figure>
+          <a class="screenshot-link" href="assets/screenshots/combat.webp" data-lightbox data-title="Dungeon combat" data-caption="Live combat, party health, carried loot and the dungeon minimap. UI shown in English." aria-label="Enlarge the dungeon combat screenshot">
+            <img src="assets/screenshots/combat-1600.webp" srcset="assets/screenshots/combat-800.webp 800w, assets/screenshots/combat-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" alt="A warrior, archer, mage and priest fighting a slime in a stone dungeon, with party health and carried-loot inventory visible.">
+          </a>
+          <figcaption>Dungeon combat · English UI</figcaption>
+        </figure>
+        <div class="feature-copy"><p class="eyebrow">01 / Dungeon expeditions</p><h3>Watch the expedition unfold.</h3><p>Monitor party health, carried equipment and the dungeon map as your mercenaries explore and fight autonomously.</p><p>Survival and extraction determine what returns to the company.</p></div>
+      </article>
+      <article class="feature-row feature-reverse">
+        <figure>
+          <a class="screenshot-link" href="assets/screenshots/expedition.webp" data-lightbox data-title="Expedition preparation" data-caption="Expedition policy, tactical priorities, supplies, equipment and the party formation. UI shown in Korean." aria-label="Enlarge the expedition preparation screenshot">
+            <img src="assets/screenshots/expedition-1600.webp" srcset="assets/screenshots/expedition-800.webp 800w, assets/screenshots/expedition-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" alt="Expedition preparation showing five policy choices, tactical priorities, potion supplies and a three-by-three formation for four mercenaries.">
+          </a>
+          <figcaption>Expedition policy &amp; formation · Korean UI</figcaption>
+        </figure>
+        <div class="feature-copy"><p class="eyebrow">02 / Party preparation</p><h3>Plan before you depart.</h3><p>Choose an expedition policy, tune tactical priorities, arrange the party’s formation and prepare supplies.</p><p>Your decisions begin before the party enters the dungeon.</p></div>
+      </article>
+      <article class="feature-row">
+        <figure>
+          <a class="screenshot-link" href="assets/screenshots/mercenary-management.webp" data-lightbox data-title="Mercenary management" data-caption="The deployed and reserve roster, with a selected mercenary’s equipment, skills and attributes. UI shown in Korean." aria-label="Enlarge the mercenary management screenshot">
+            <img src="assets/screenshots/mercenary-management-1600.webp" srcset="assets/screenshots/mercenary-management-800.webp 800w, assets/screenshots/mercenary-management-1600.webp 1600w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 68vw, 940px" width="1600" height="900" loading="lazy" decoding="async" alt="The company roster with four deployed mercenaries, two reserves, and a selected warrior’s equipment, skills and combat attributes.">
+          </a>
+          <figcaption>Mercenary roster &amp; equipment · Korean UI</figcaption>
+        </figure>
+        <div class="feature-copy"><p class="eyebrow">03 / Company management</p><h3>Build the company behind the party.</h3><p>Recruit mercenaries, compare their skills and attributes, and manage equipment and storage between expeditions.</p><p>Prepare the people and resources you will send into the next dungeon.</p></div>
+      </article>
+      <p class="build-note">Screenshots show work in progress. Game visuals and interfaces may change during development.</p>
+    </section>
+
+    <section id="development" class="development section-rule" aria-labelledby="development-title">
+      <div class="container development-inner">
+        <div class="development-copy"><p class="eyebrow">Development</p><h2 id="development-title">An independent game<br>in active development.</h2><p>Mercenary Company is currently in active development by Mercenary Company Games.</p><p>We are building a PC dungeon RPG around party preparation, autonomous expeditions and the risk of extraction.</p></div>
+        <dl class="project-details"><div><dt>Studio</dt><dd>Mercenary Company Games</dd></div><div><dt>Product</dt><dd>Mercenary Company</dd></div><div><dt>Platform</dt><dd>PC</dd></div><div><dt>Engine</dt><dd>Godot Engine</dd></div><div><dt>Status</dt><dd>In active development</dd></div></dl>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container" aria-labelledby="contact-title">
+      <div><p class="eyebrow">Contact</p><h2 id="contact-title">Contact the studio.</h2><p>Business and development inquiries.</p></div>
+      <a class="contact-email" href="mailto:founder@mercenarycompanygame.com">founder@mercenarycompanygame.com <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer section-rule"><div class="container footer-inner"><p>© 2026 Mercenary Company Games.<br>All rights reserved.</p><p>Mercenary Company is currently in development.</p></div></footer>
+
+  <dialog id="screenshot-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-content">
+      <div class="dialog-header"><h2 id="dialog-title">Game screenshot</h2><button id="dialog-close" type="button" autofocus>Close <span aria-hidden="true">×</span></button></div>
+      <img id="dialog-image" alt="" width="1920" height="1080">
+      <div class="dialog-footer"><p id="dialog-caption"></p><a id="dialog-original" href="assets/screenshots/hero-gameplay.webp" target="_blank" rel="noopener">Open original image <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </dialog>
+</body>
 </html>
