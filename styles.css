@@ -359,6 +359,7 @@ h2 { margin-bottom: 0; font-size: clamp(2rem, 4vw, 3.45rem); letter-spacing: -0.
   .screenshot__frame { aspect-ratio: 16 / 9; }
   .screenshot figcaption { flex-direction: row; }
   .contact-layout { align-items: flex-start; flex-direction: column; gap: 1.2rem; }
+  .contact-link { font-size: clamp(1rem, 4.7vw, 1.25rem); }
   .site-footer__inner { grid-template-columns: 1fr auto; row-gap: 1.2rem; }
   .site-footer p { grid-row: 2; text-align: left; }
   .back-to-top { grid-column: 2; grid-row: 1 / span 2; }
