@@ -41,9 +41,8 @@ nav a:hover, .text-link:hover { color: var(--paper); }
 .hero-footer { grid-column: 1; grid-row: 2; align-self: end; }
 .hero-screen { grid-column: 2; grid-row: 1 / span 2; }
 .hero-footer .hero-description { margin-top: 0; }
-.hero h1 { font-size: clamp(43px, 4.2vw, 65px); line-height: 1.03; letter-spacing: -.035em; text-transform: uppercase; }
-.hero h1 span { display: block; }
-.hero h1 span:last-child { color: var(--gold); }
+.hero h1 { line-height: 1; }
+.game-logo { width: 100%; max-width: 460px; }
 .hero-lead { font-size: 19px; line-height: 1.6; max-width: 39ch; margin-top: 28px; color: var(--paper); }
 .hero-description { max-width: 43ch; margin-top: 18px; font-size: 16px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 28px; }
@@ -99,6 +98,11 @@ dd { margin: 0; font-size: 16px; }
 .site-footer { padding-block: 28px; }
 .footer-inner { display: flex; gap: 32px; justify-content: space-between; align-items: center; }
 .footer-inner p { font-size: 12px; line-height: 1.6; }
+.footer-team { display: flex; flex-wrap: wrap; align-items: baseline; gap: 14px 40px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); }
+.footer-team .eyebrow { margin-bottom: 0; }
+.team-credits { display: flex; flex-wrap: wrap; gap: 16px 40px; }
+.team-credits dt { color: var(--paper); font-size: 13px; font-weight: 600; }
+.team-credits dd { color: var(--soft); font-size: 12px; line-height: 1.6; }
 .investment-support { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); }
 .investment-support span { white-space: nowrap; }
 .investment-support .eyebrow { margin-bottom: 0; }
@@ -116,7 +120,6 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
 .dialog-footer a { color: var(--gold); min-height: 44px; display: inline-flex; align-items: center; flex-shrink: 0; }
 @media (max-width: 1200px) {
   .hero { gap: 18px 32px; padding-block: 62px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); }
-  .hero h1 { font-size: clamp(42px, 4.4vw, 57px); }
   .hero-lead { font-size: 18px; }
   .feature-row, .feature-reverse { gap: 32px; }
   .development-inner { gap: 70px; }
@@ -142,9 +145,6 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
   .hero-copy, .hero-footer, .hero-screen { grid-column: auto; grid-row: auto; }
   .hero-screen { margin-top: 26px; }
   .hero-footer { margin-top: 22px; }
-  .hero h1 { font-size: clamp(42px, 8.2vw, 63px); }
-  .hero h1 span { display: inline; }
-  .hero h1 span + span::before { content: " "; }
   .hero-lead { max-width: 52ch; margin-top: 22px; }
   .hero-description { max-width: 56ch; }
   .hero-actions { margin-top: 22px; }
@@ -174,8 +174,6 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
   body { font-size: 16px; }
   .wordmark { font-size: 16px; }
   .monogram { width: 28px; height: 32px; font-size: 19px; }
-  .hero h1 span { display: block; }
-  .hero h1 span + span::before { content: none; }
   .hero-lead { font-size: 18px; }
   .hero-actions { gap: 8px 20px; }
   .button { padding-inline: 16px; }

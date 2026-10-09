@@ -10,10 +10,11 @@ Official website for **Mercenary Company**, a PC tactical extraction dungeon RPG
 
 The site uses plain HTML, CSS, and a small JavaScript file. No build step, external framework, web font, or analytics service is required.
 
-- `index.html`: product description, gameplay showcase, studio and founder, dated development record, contact, investment support, and SEO metadata
+- `index.html`: product description, gameplay showcase, studio, dated development record, contact, small team credits and investment support in the footer, and SEO metadata
 - `styles.css`: stylesheet source, embedded in `index.html` to avoid an additional blocking network request
 - `script.js`: optional screenshot lightbox using a native HTML dialog
 - `assets/screenshots/`: optimized real gameplay images and social preview
+- `assets/brand/`: transparent full-title game wordmark, delivered as responsive WebP images
 - `favicon.svg`: studio monogram
 - `CNAME`: custom domain used by GitHub Pages
 - `robots.txt` and `sitemap.xml`: public search indexing information
@@ -45,9 +46,31 @@ Original 1920 × 1080 PNG captures are retained outside this public repository. 
 
 The website describes party preparation and autonomous expeditions. It does not claim direct player control during combat. Release dates, player counts, investment amounts or rounds, team size, and Claude API integration are not asserted.
 
+## Game title logo
+
+The hero uses the full game name, **MERCENARY COMPANY**, as a transparent, two-line wordmark. This branding asset was created with the built-in image generation tool on 2026-10-09. It is separate from the real game screenshots. The original alpha channel is preserved in 600 × 200 and 1200 × 400 WebP delivery copies. The original PNG is retained outside this public repository.
+
+<details>
+<summary>Logo generation prompt</summary>
+
+```text
+Use case: logo-brand.
+Asset type: transparent full-title game wordmark for the official Mercenary Company website.
+Primary request: Create a polished, restrained PC dark-fantasy game title logo, consisting of the full English game name.
+Text (verbatim): "MERCENARY COMPANY". Spell exactly M-E-R-C-E-N-A-R-Y C-O-M-P-A-N-Y. Arrange MERCENARY above COMPANY, both centered, closely stacked as one wordmark. No other text.
+Style: custom medieval-inspired serif capital lettering with a few understated chiseled cuts; broad, readable letterforms. Quiet, serious, professional indie game identity.
+Color palette: warm pale pewter lettering with a few muted antique-brass details, suitable for a charcoal #111315 website. Very subtle flat worn-metal detail, not glossy 3D.
+Composition: wide compact two-line wordmark, approximately 3:1 aspect ratio, occupying almost the whole canvas with minimal transparent margins. The words are the logo; use no separate large emblem.
+Backdrop: genuinely transparent alpha background.
+Constraints: letter accuracy and readability at 340px wide are essential. Clean edges. Keep every letter fully visible.
+Avoid: gradients, glow, neon, flames, dramatic lighting, scenery, black background plate, shields, swords, crowns, tiny unreadable ornaments, mobile-game styling, slogans, watermarks.
+```
+
+</details>
+
 ## Studio and development information
 
-The founder name (Seyoun Han), role (Founder & Game Developer), country (South Korea), company founding date (2026-06-04), and Pusan National University investment support were supplied by the founder. The founding date is displayed in the studio details and Organization structured data. Investment support is displayed as plain text at the bottom of the page. No university logo, investment amount, investment round, or official endorsement is implied. Incorporation documents and the investment contract have not been independently reviewed.
+The founder supplied the team names and roles: Seyoun Han (Founder & UI/UX Designer), Wonuk Choi (Logic Engineer), and Dongyun Lee (Project Lead). The English spellings of Wonuk Choi and Dongyun Lee were confirmed by the founder. Names and roles are displayed as small credits in the footer and as Organization member structured data. South Korea, the company founding date (2026-06-04), and Pusan National University investment support were also supplied by the founder. The founding date is displayed in the studio details and Organization structured data. Investment support is displayed as plain text at the bottom of the page. No university logo, investment amount, investment round, or official endorsement is implied. Incorporation documents and the investment contract have not been independently reviewed.
 
 The development record uses specific evidence:
 
