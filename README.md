@@ -47,7 +47,7 @@ The website describes party preparation and autonomous expeditions. It does not 
 
 ## Studio and development information
 
-The founder name (Seyoun Han), role (Founder & Game Developer), country (South Korea), and Pusan National University investment support were supplied by the founder. Investment support is displayed as plain text at the bottom of the page. No university logo, investment amount, investment round, official endorsement, or legal incorporation date is implied. The investment contract has not been independently reviewed.
+The founder name (Seyoun Han), role (Founder & Game Developer), country (South Korea), company founding date (2026-06-04), and Pusan National University investment support were supplied by the founder. The founding date is displayed in the studio details and Organization structured data. Investment support is displayed as plain text at the bottom of the page. No university logo, investment amount, investment round, or official endorsement is implied. Incorporation documents and the investment contract have not been independently reviewed.
 
 The development record uses specific evidence:
 
