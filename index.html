@@ -23,6 +23,33 @@
   <meta name="twitter:description" content="A tactical extraction dungeon RPG currently in development by Mercenary Company Games.">
   <meta name="twitter:image" content="https://mercenarycompanygame.com/assets/screenshots/social-preview.jpg">
   <meta name="twitter:image:alt" content="Actual Mercenary Company dungeon gameplay with party health, combat and a minimap.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mercenarycompanygame.com/#studio",
+        "name": "Mercenary Company Games",
+        "url": "https://mercenarycompanygame.com/",
+        "description": "An independent game development team in South Korea, developing Mercenary Company for PC.",
+        "email": "founder@mercenarycompanygame.com",
+        "founder": { "@type": "Person", "name": "Seyoun Han", "jobTitle": "Founder & Game Developer" }
+      },
+      {
+        "@type": "VideoGame",
+        "@id": "https://mercenarycompanygame.com/#game",
+        "name": "Mercenary Company",
+        "url": "https://mercenarycompanygame.com/",
+        "description": "A PC tactical extraction dungeon RPG in active development, with mercenary management, party preparation and autonomous dungeon expeditions.",
+        "gamePlatform": "PC",
+        "genre": ["Role-playing game", "Strategy"],
+        "image": "https://mercenarycompanygame.com/assets/screenshots/social-preview.jpg",
+        "author": { "@id": "https://mercenarycompanygame.com/#studio" }
+      }
+    ]
+  }
+  </script>
   <link rel="preload" as="image" href="assets/screenshots/hero-gameplay.webp" imagesrcset="assets/screenshots/hero-gameplay-656.webp 656w, assets/screenshots/hero-gameplay-768.webp 768w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" imagesizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" fetchpriority="high">
   <!-- Inlined from styles.css to avoid a blocking network request. -->
   <style id="site-styles">
@@ -46,11 +73,11 @@ button { font: inherit; }
 a, button { -webkit-tap-highlight-color: transparent; }
 a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
 main:focus { outline: none; }
-p, h1, h2, h3, figure, dl { margin: 0; }
+p, h1, h2, h3, h4, figure, dl { margin: 0; }
 p { color: var(--soft); }
-h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+h1, h2, h3, h4 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
 h2 { font-size: clamp(30px, 3vw, 43px); line-height: 1.18; letter-spacing: -.025em; }
-h3 { line-height: 1.25; }
+h3, h4 { line-height: 1.25; }
 img { display: block; max-width: 100%; height: auto; }
 .container { width: min(var(--content), calc(100% - 80px)); margin-inline: auto; }
 .section-rule { border-top: 1px solid var(--rule); }
@@ -103,6 +130,7 @@ figcaption { margin-top: 12px; font-size: 12px; letter-spacing: .025em; color: v
 .feature-copy p:not(.eyebrow) + p { margin-top: 14px; }
 .feature-copy p:not(.eyebrow) { font-size: 16px; max-width: 36ch; }
 .build-note { font-size: 13px; text-align: center; margin-top: 38px; }
+.studio { padding-block: 70px; }
 .development { background: var(--deep); padding-block: 70px; }
 .development-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 120px; align-items: start; }
 .development-copy > p:not(.eyebrow) { max-width: 55ch; margin-top: 24px; }
@@ -111,6 +139,13 @@ figcaption { margin-top: 12px; font-size: 12px; letter-spacing: .025em; color: v
 .project-details > div { display: grid; grid-template-columns: 95px 1fr; gap: 20px; padding-block: 17px; border-bottom: 1px solid var(--rule); }
 dt { color: var(--soft); font-size: 13px; }
 dd { margin: 0; font-size: 16px; }
+.development-record { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--rule); }
+.development-record > h3 { font-size: 27px; max-width: 36ch; }
+.development-timeline { margin: 28px 0 0; padding: 0; list-style: none; }
+.development-timeline > li { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 32px; padding-block: 24px; border-top: 1px solid var(--rule); }
+.development-timeline time { color: var(--gold); font-size: 14px; }
+.development-timeline h4 { font-size: 22px; margin-bottom: 8px; }
+.development-timeline p { font-size: 16px; max-width: 76ch; }
 .contact { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 34px; padding-block: 72px; }
 .contact p:last-child { margin-top: 16px; font-size: 16px; }
 .contact-email { display: inline-flex; align-items: center; gap: 24px; padding-block: 12px; border-bottom: 1px solid var(--gold); color: var(--paper); font-size: clamp(17px, 1.45vw, 26px); overflow-wrap: anywhere; }
@@ -119,6 +154,10 @@ dd { margin: 0; font-size: 16px; }
 .site-footer { padding-block: 28px; }
 .footer-inner { display: flex; gap: 32px; justify-content: space-between; align-items: center; }
 .footer-inner p { font-size: 12px; line-height: 1.6; }
+.investment-support { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); }
+.investment-support span { white-space: nowrap; }
+.investment-support .eyebrow { margin-bottom: 0; }
+.investment-support p:not(.eyebrow) { color: var(--paper); font-size: 14px; }
 dialog { width: min(1700px, calc(100% - 48px)); max-width: none; max-height: calc(100svh - 48px); margin: auto; padding: 18px 22px; background: var(--deep); color: var(--paper); border: 1px solid var(--rule); }
 dialog::backdrop { background: rgb(0 0 0 / .88); }
 .dialog-header, .dialog-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -165,7 +204,7 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
   .hero-description { max-width: 56ch; }
   .hero-actions { margin-top: 22px; }
   .development-status { margin-top: 20px; }
-  .overview, .development { padding-block: 48px; }
+  .overview, .studio, .development { padding-block: 48px; }
   .section-intro, .development-inner { grid-template-columns: 1fr; gap: 28px; }
   .game-pillars { margin-top: 32px; }
   .showcase { padding-block: 48px; }
@@ -177,6 +216,8 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
   .feature-copy h3 { margin-bottom: 14px; }
   .feature-copy p:not(.eyebrow) { max-width: 60ch; }
   .build-note { text-align: left; margin-top: 30px; }
+  .development-record { margin-top: 32px; padding-top: 28px; }
+  .development-timeline > li { grid-template-columns: 1fr; gap: 10px; }
   .contact { padding-block: 48px; gap: 20px; }
   .footer-inner { align-items: start; flex-direction: column; gap: 14px; }
   dialog { width: calc(100% - 24px); max-height: calc(100svh - 24px); padding: 14px; }
@@ -214,7 +255,7 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
       <a class="wordmark" href="#main"><span class="monogram" aria-hidden="true">M</span>Mercenary Company Games</a>
       <nav aria-label="Main navigation">
         <a href="#game">Game</a>
-        <a href="#features">Features</a>
+        <a href="#studio">Studio</a>
         <a href="#development">Development</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -231,7 +272,7 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
         <a class="screenshot-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean." aria-label="Enlarge the dungeon expedition screenshot">
           <img src="assets/screenshots/hero-gameplay.webp" srcset="assets/screenshots/hero-gameplay-656.webp 656w, assets/screenshots/hero-gameplay-768.webp 768w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" width="1920" height="1080" fetchpriority="high" alt="Mercenary Company dungeon expedition: a four-person party facing hostile mercenaries, with party health, skills and a minimap.">
         </a>
-        <figcaption><span>Actual gameplay · Development build</span><a class="zoom-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+        <figcaption><span>Actual gameplay · Captured <time datetime="2026-10-08">8 Oct 2026</time></span><a class="zoom-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean.">View full image <span aria-hidden="true">↗</span></a></figcaption>
       </figure>
       <div class="hero-footer">
         <p class="hero-description">Build your company. Recruit and equip a party. Set their strategy, then watch the expedition unfold.</p>
@@ -290,13 +331,49 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
         </figure>
         <div class="feature-copy"><p class="eyebrow">03 / Company management</p><h3>Build the company behind the party.</h3><p>Recruit mercenaries, compare their skills and attributes, and manage equipment and storage between expeditions.</p><p>Prepare the people and resources you will send into the next dungeon.</p></div>
       </article>
-      <p class="build-note">Screenshots show work in progress. Game visuals and interfaces may change during development.</p>
+      <p class="build-note">Actual development build, captured on <time datetime="2026-10-08">8 October 2026</time>. Game visuals and interfaces may change during development.</p>
+    </section>
+
+    <section id="studio" class="studio section-rule" aria-labelledby="studio-title">
+      <div class="container development-inner">
+        <div class="development-copy">
+          <p class="eyebrow">The studio</p>
+          <h2 id="studio-title">Mercenary Company Games.</h2>
+          <p>We are an independent game development team in South Korea. Led by founder and game developer Seyoun Han, we are building Mercenary Company for PC.</p>
+          <p>Our game combines the long-term decisions of running a mercenary company with party preparation, autonomous dungeon expeditions and extraction risk.</p>
+        </div>
+        <dl class="project-details">
+          <div><dt>Founder</dt><dd>Seyoun Han</dd></div>
+          <div><dt>Role</dt><dd>Founder &amp; Game Developer</dd></div>
+          <div><dt>Based in</dt><dd>South Korea</dd></div>
+          <div><dt>Focus</dt><dd>PC game development</dd></div>
+          <div><dt>Product</dt><dd>Mercenary Company</dd></div>
+        </dl>
+      </div>
     </section>
 
     <section id="development" class="development section-rule" aria-labelledby="development-title">
       <div class="container development-inner">
         <div class="development-copy"><p class="eyebrow">Development</p><h2 id="development-title">An independent game<br>in active development.</h2><p>Mercenary Company is currently in active development by Mercenary Company Games.</p><p>We are building a PC dungeon RPG around party preparation, autonomous expeditions and the risk of extraction.</p></div>
         <dl class="project-details"><div><dt>Studio</dt><dd>Mercenary Company Games</dd></div><div><dt>Product</dt><dd>Mercenary Company</dd></div><div><dt>Platform</dt><dd>PC</dd></div><div><dt>Engine</dt><dd>Godot Engine</dd></div><div><dt>Status</dt><dd>In active development</dd></div></dl>
+      </div>
+      <div class="container development-record">
+        <p class="eyebrow">Development record</p>
+        <h3>Project history.</h3>
+        <ol class="development-timeline">
+          <li>
+            <time datetime="2026-09-06">6 September 2026</time>
+            <div><h4>First recorded project commit</h4><p>Mercenary Company's recorded source history starts here.</p></div>
+          </li>
+          <li>
+            <time datetime="2026-10-08">8 October 2026</time>
+            <div><h4>Development build preview</h4><p>The screenshots above were captured from a running Godot build. They show dungeon combat, expedition policies and formation, and a mercenary roster with equipment, attributes and skills.</p></div>
+          </li>
+          <li>
+            <time datetime="2026-10-09">9 October 2026</time>
+            <div><h4>Continued interface work</h4><p>The game repository records further UI updates. Development continues across the expedition and company management interfaces.</p></div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -305,7 +382,10 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
       <!--email_off--><a class="contact-email" href="mailto:founder@mercenarycompanygame.com">founder@mercenarycompanygame.com <span aria-hidden="true">↗</span></a><!--/email_off-->
     </section>
   </main>
-  <footer class="site-footer section-rule"><div class="container footer-inner"><p>© 2026 Mercenary Company Games.<br>All rights reserved.</p><p>Mercenary Company is currently in development.</p></div></footer>
+  <footer class="site-footer section-rule">
+    <div class="container footer-inner"><p>© 2026 Mercenary Company Games.<br>All rights reserved.</p><p>Mercenary Company is currently in development.</p></div>
+    <div class="container investment-support"><p class="eyebrow">Investment support</p><p>Pusan National University <span lang="ko">(부산대학교)</span></p></div>
+  </footer>
 
   <dialog id="screenshot-dialog" aria-labelledby="dialog-title">
     <div class="dialog-content">
