@@ -1,4 +1,41 @@
 (() => {
+  const video = document.querySelector('#gameplay-video');
+  const toggle = document.querySelector('#gameplay-toggle');
+  if (!video || !toggle) return;
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const update = () => {
+    toggle.textContent = video.paused ? 'Play preview' : 'Pause preview';
+  };
+
+  video.controls = false;
+  toggle.hidden = false;
+  video.addEventListener('play', update);
+  video.addEventListener('pause', update);
+  video.addEventListener('error', () => {
+    video.controls = true;
+    toggle.hidden = true;
+  });
+  toggle.addEventListener('click', () => {
+    if (video.paused) video.play().catch(update);
+    else video.pause();
+  });
+  reducedMotion.addEventListener('change', (event) => {
+    if (event.matches) {
+      video.autoplay = false;
+      video.pause();
+    }
+  });
+
+  // Automatic motion is optional; the play button is always available.
+  if (!reducedMotion.matches && !navigator.connection?.saveData) {
+    video.autoplay = true;
+    video.play().catch(update);
+  }
+  update();
+})();
+
+(() => {
   const dialog = document.querySelector('#screenshot-dialog');
   if (!dialog || typeof dialog.showModal !== 'function') return;
 

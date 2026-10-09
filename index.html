@@ -56,7 +56,7 @@
     ]
   }
   </script>
-  <link rel="preload" as="image" href="assets/screenshots/hero-gameplay.webp" imagesrcset="assets/screenshots/hero-gameplay-656.webp 656w, assets/screenshots/hero-gameplay-768.webp 768w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" imagesizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/video/gameplay-poster.webp" fetchpriority="high">
   <!-- Inlined from styles.css to avoid a blocking network request. -->
   <style id="site-styles">
 :root {
@@ -88,6 +88,7 @@ img { display: block; max-width: 100%; height: auto; }
 .container { width: min(var(--content), calc(100% - 80px)); margin-inline: auto; }
 .section-rule { border-top: 1px solid var(--rule); }
 .eyebrow { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: .13em; line-height: 1.5; text-transform: uppercase; margin-bottom: 18px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .skip-link { position: absolute; z-index: 10; left: 20px; top: 12px; padding: 10px 16px; background: var(--paper); color: var(--deep); transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 .site-header { border-bottom: 1px solid var(--rule); }
@@ -115,8 +116,10 @@ nav a:hover, .text-link:hover { color: var(--paper); }
 .screenshot-link:hover { border-color: var(--gold); }
 .screenshot-link img { width: 100%; }
 figcaption { margin-top: 12px; font-size: 12px; letter-spacing: .025em; color: var(--soft); }
-.hero-screen figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 20px; }
-.zoom-link { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+.hero-screen figcaption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 20px; }
+#gameplay-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; border: 1px solid #555950; background: var(--deep); }
+.preview-toggle { min-height: 44px; padding: 8px 0; border: 0; background: transparent; color: var(--gold); font-size: 12px; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.preview-toggle:hover { color: var(--paper); }
 .overview { background: var(--deep); padding-block: 70px 68px; }
 .section-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .section-intro > p { max-width: 58ch; }
@@ -272,10 +275,12 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
         <p class="hero-lead">A tactical extraction dungeon RPG where every expedition puts your mercenaries and equipment at risk.</p>
       </div>
       <figure class="hero-screen">
-        <a class="screenshot-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean." aria-label="Enlarge the dungeon expedition screenshot">
-          <img src="assets/screenshots/hero-gameplay.webp" srcset="assets/screenshots/hero-gameplay-656.webp 656w, assets/screenshots/hero-gameplay-768.webp 768w, assets/screenshots/hero-gameplay-960.webp 960w, assets/screenshots/hero-gameplay-1280.webp 1280w, assets/screenshots/hero-gameplay.webp 1920w" sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1200px) 58vw, 840px" width="1920" height="1080" fetchpriority="high" alt="Mercenary Company dungeon expedition: a four-person party facing hostile mercenaries, with party health, skills and a minimap.">
-        </a>
-        <figcaption><span>Actual gameplay · Captured <time datetime="2026-10-08">8 Oct 2026</time></span><a class="zoom-link" href="assets/screenshots/hero-gameplay.webp" data-lightbox data-title="Dungeon expedition" data-caption="Actual gameplay from the development build. UI shown in Korean.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+        <video id="gameplay-video" width="1280" height="720" controls muted loop playsinline preload="none" poster="assets/video/gameplay-poster.webp" aria-label="Mercenary Company gameplay preview showing dungeon exploration and autonomous party combat." aria-describedby="gameplay-description gameplay-caption">
+          <source src="assets/video/gameplay-loop.mp4" type="video/mp4">
+          <p><a href="assets/video/gameplay-loop.mp4">Watch the gameplay preview.</a></p>
+        </video>
+        <p id="gameplay-description" class="visually-hidden">Four mercenaries explore a dungeon and fight enemies automatically. The camera follows the party through four short gameplay excerpts. The Korean interface shows party health, selected skills, a minimap and the expedition timer. This preview has no audio.</p>
+        <figcaption id="gameplay-caption"><span>Actual gameplay · 8-second loop · Korean UI<br>Recorded <time datetime="2026-10-09">9 Oct 2026</time></span><button id="gameplay-toggle" class="preview-toggle" type="button" aria-controls="gameplay-video" hidden>Play preview</button></figcaption>
       </figure>
       <div class="hero-footer">
         <p class="hero-description">Build your company. Recruit and equip a party. Set their strategy, then watch the expedition unfold.</p>
@@ -360,7 +365,7 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
           <p class="eyebrow">Development</p>
           <h2 id="development-title">An independent game<br>in active development.</h2>
           <p>The current development build includes party formation, expedition policies, mercenary roster and equipment interfaces, and autonomous dungeon combat.</p>
-          <p>The screenshots on this page were captured from a running Godot build. Gameplay systems and interfaces continue to evolve during development.</p>
+          <p>The gameplay preview and screenshots on this page were captured from running Godot builds. Gameplay systems and interfaces continue to evolve during development.</p>
           <h3 class="workflow-title">Engineering workflow.</h3>
           <p>We develop the game with Godot and GDScript. We plan to adopt Claude Code for gameplay systems, UI/UX iteration, debugging, refactoring, testing and optimization.</p>
           <p class="workflow-note">Claude Code adoption is at the planning stage.</p>

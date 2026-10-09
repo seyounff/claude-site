@@ -10,10 +10,11 @@ Official website for **Mercenary Company**, a PC tactical extraction dungeon RPG
 
 The site uses plain HTML, CSS, and a small JavaScript file. No build step, external framework, web font, or analytics service is required.
 
-- `index.html`: product description, gameplay showcase, studio, dated development record, contact, small team credits in the footer, and SEO metadata
+- `index.html`: product description, looping gameplay preview, gameplay showcase, studio, dated development record, contact, small team credits in the footer, and SEO metadata
 - `styles.css`: stylesheet source, embedded in `index.html` to avoid an additional blocking network request
-- `script.js`: optional screenshot lightbox using a native HTML dialog
+- `script.js`: gameplay play/pause and motion preferences, plus an optional screenshot lightbox using a native HTML dialog
 - `assets/screenshots/`: optimized real gameplay images and social preview
+- `assets/video/`: an 8-second muted gameplay loop and a poster captured from the same footage
 - `assets/brand/`: transparent full-title game wordmark, delivered as responsive WebP images
 - `favicon.svg`: studio monogram
 - `CNAME`: custom domain used by GitHub Pages
@@ -30,6 +31,14 @@ python -m http.server 8000
 ```
 
 Then open http://localhost:8000/. Review at 1920, 1440, 1280, 768, and 390 pixels wide when changing the layout.
+
+## Real gameplay preview
+
+The hero preview was recorded on 2026-10-09 with Godot's built-in Movie Maker, running a separate local copy of the current game project and a copy of an existing normal campaign save. The original game repository and saves were not modified. Four 2-second excerpts show dungeon exploration and autonomous party combat using the game's normal 1× speed and built-in observer camera. Navigation, collision and fog debug overlays were disabled.
+
+The delivery video is 1280 × 720, 30 FPS H.264 with 240 frames, no audio track, and MP4 fast-start metadata. Only cuts and video compression were applied. The poster is a frame from the same recording. Raw footage is retained outside this public repository.
+
+The preview loops automatically with sound off. A visible play/pause button supports keyboard use. Reduced-motion and data-saving preferences prevent automatic playback; manual playback remains available. Without JavaScript, native video controls are available.
 
 ## Real game screenshots
 
