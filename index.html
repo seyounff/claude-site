@@ -140,6 +140,9 @@ figcaption { margin-top: 12px; font-size: 12px; letter-spacing: .025em; color: v
 .development-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 120px; align-items: start; }
 .development-copy > p:not(.eyebrow) { max-width: 55ch; margin-top: 24px; }
 .development-copy > p:not(.eyebrow) + p { margin-top: 12px; }
+.workflow-title { margin-top: 32px; font-size: 24px; }
+.development-copy .workflow-title + p { margin-top: 12px; }
+.development-copy .workflow-note { font-size: 14px; }
 .project-details { border-top: 1px solid var(--rule); }
 .project-details > div { display: grid; grid-template-columns: 95px 1fr; gap: 20px; padding-block: 17px; border-bottom: 1px solid var(--rule); }
 dt { color: var(--soft); font-size: 13px; }
@@ -357,8 +360,16 @@ dialog::backdrop { background: rgb(0 0 0 / .88); }
 
     <section id="development" class="development section-rule" aria-labelledby="development-title">
       <div class="container development-inner">
-        <div class="development-copy"><p class="eyebrow">Development</p><h2 id="development-title">An independent game<br>in active development.</h2><p>Mercenary Company is currently in active development by Mercenary Company Games.</p><p>We are building a PC dungeon RPG around party preparation, autonomous expeditions and the risk of extraction.</p></div>
-        <dl class="project-details"><div><dt>Studio</dt><dd>Mercenary Company Games</dd></div><div><dt>Product</dt><dd>Mercenary Company</dd></div><div><dt>Platform</dt><dd>PC</dd></div><div><dt>Engine</dt><dd>Godot Engine</dd></div><div><dt>Status</dt><dd>In active development</dd></div></dl>
+        <div class="development-copy">
+          <p class="eyebrow">Development</p>
+          <h2 id="development-title">An independent game<br>in active development.</h2>
+          <p>The current development build includes party formation, expedition policies, mercenary roster and equipment interfaces, and autonomous dungeon combat.</p>
+          <p>The screenshots on this page were captured from a running Godot build. Gameplay systems and interfaces continue to evolve during development.</p>
+          <h3 class="workflow-title">Engineering workflow.</h3>
+          <p>We develop the game with Godot and GDScript. We plan to adopt Claude Code for gameplay systems, UI/UX iteration, debugging, refactoring, testing and optimization.</p>
+          <p class="workflow-note">Claude Code adoption is at the planning stage.</p>
+        </div>
+        <dl class="project-details"><div><dt>Studio</dt><dd>Mercenary Company Games</dd></div><div><dt>Product</dt><dd>Mercenary Company</dd></div><div><dt>Platform</dt><dd>PC</dd></div><div><dt>Engine</dt><dd>Godot Engine</dd></div><div><dt>Language</dt><dd>GDScript</dd></div><div><dt>Status</dt><dd>In active development</dd></div></dl>
       </div>
       <div class="container development-record">
         <p class="eyebrow">Development record</p>

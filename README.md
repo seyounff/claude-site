@@ -78,7 +78,7 @@ The development record uses specific evidence:
 - 2026-10-08: the actual game build screenshots displayed on the site.
 - 2026-10-09: game repository commit `26f7f784`, titled `UI 수정`, including expedition and company management UI updates. The note does not claim a release or new completed gameplay systems.
 
-Organization and VideoGame structured data connect the studio, founder, product, contact address, and canonical URL. The page does not describe the game as powered by Claude; the founder currently plans to use Claude Code in the development workflow.
+Organization and VideoGame structured data connect the studio, founder, product, contact address, and canonical URL. The page does not describe the game as powered by Claude. The Development section describes the founder-confirmed plan to adopt Claude Code for gameplay systems, UI/UX iteration, debugging, refactoring, testing, and optimization, explicitly marked as being at the planning stage. It does not claim current Claude usage or game API integration. Current-build descriptions are limited to features visible in the actual development screenshots and reviewed project interfaces. Godot/GDScript use was checked against project.godot and a bounded read of the formation UI script on 2026-10-09.
 
 ## Updating content
 
