@@ -10,7 +10,7 @@ Official website for **Mercenary Company**, a PC tactical extraction dungeon RPG
 
 The site uses plain HTML, CSS, and a small JavaScript file. No build step, external framework, web font, or analytics service is required.
 
-- `index.html`: product description, gameplay showcase, studio, dated development record, contact, small team credits and investment support in the footer, and SEO metadata
+- `index.html`: product description, gameplay showcase, studio, dated development record, contact, small team credits in the footer, and SEO metadata
 - `styles.css`: stylesheet source, embedded in `index.html` to avoid an additional blocking network request
 - `script.js`: optional screenshot lightbox using a native HTML dialog
 - `assets/screenshots/`: optimized real gameplay images and social preview
@@ -70,7 +70,7 @@ Avoid: gradients, glow, neon, flames, dramatic lighting, scenery, black backgrou
 
 ## Studio and development information
 
-The founder supplied the team names and roles: Seyoun Han (Founder & UI/UX Designer), Wonuk Choi (Logic Engineer), and Dongyun Lee (Project Lead). The English spellings of Wonuk Choi and Dongyun Lee were confirmed by the founder. Names and roles are displayed as small credits in the footer and as Organization member structured data. South Korea, the company founding date (2026-06-04), and Pusan National University investment support were also supplied by the founder. The founding date is displayed in the studio details and Organization structured data. Investment support is displayed as plain text at the bottom of the page. No university logo, investment amount, investment round, or official endorsement is implied. Incorporation documents and the investment contract have not been independently reviewed.
+The founder supplied the team names and roles: Seyoun Han (Founder & UI/UX Designer), Wonuk Choi (Logic Engineer), and Dongyun Lee (Project Lead). The English spellings of Wonuk Choi and Dongyun Lee were confirmed by the founder. Names and roles are displayed as small credits in the footer and as Organization member structured data. South Korea and the company founding date (2026-06-04) were also supplied by the founder. The founding date is displayed in the studio details and Organization structured data. Incorporation documents have not been independently reviewed. The site does not claim an investment round or university endorsement.
 
 The development record uses specific evidence:
 
